@@ -11,15 +11,25 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Cardio_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group width="1" alignment="center" verticalAlignment="center" spacing="12" id="kZd-3p-M11">
+                        <group width="1" alignment="left" verticalAlignment="center" layout="vertical" spacing="28" id="EhF-8f-guI">
                             <items>
-                                <imageView alignment="left" image="Heart" id="HM9-ZM-dXN"/>
-                                <label alignment="right" text="bpm" textAlignment="right" id="QHx-gR-aIm">
-                                    <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
-                                </label>
+                                <group width="1" alignment="left" spacing="10" id="t6i-eu-C8l">
+                                    <items>
+                                        <imageView width="0.20000000000000001" height="1" alignment="left" image="location.circle" catalog="system" id="Ig0-uO-cCR"/>
+                                        <label alignment="left" text="Steps" id="jsG-mM-5mC"/>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="center" verticalAlignment="center" spacing="12" id="kZd-3p-M11">
+                                    <items>
+                                        <imageView width="0.29999999999999999" height="1" alignment="left" verticalAlignment="center" image="heart.circle" catalog="system" id="HM9-ZM-dXN"/>
+                                        <label alignment="left" text="bpm" textAlignment="right" id="QHx-gR-aIm">
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <button width="1" alignment="left" verticalAlignment="bottom" title="Start" id="UPq-Bc-V5F"/>
                             </items>
                         </group>
-                        <button width="1" alignment="left" verticalAlignment="bottom" title="Start" id="UPq-Bc-V5F"/>
                     </items>
                 </controller>
             </objects>
@@ -58,6 +68,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Heart" width="32" height="32"/>
+        <image name="heart.circle" catalog="system" width="64" height="62"/>
+        <image name="location.circle" catalog="system" width="64" height="62"/>
     </resources>
 </document>
