@@ -13,7 +13,7 @@ class HealthDataManager: NSObject {
     
     static let sharedManager = HealthDataManager()
     
-    private var healthStore: HKHealthStore?
+    var healthStore: HKHealthStore?
     
     private override init() {
         if HKHealthStore.isHealthDataAvailable() {

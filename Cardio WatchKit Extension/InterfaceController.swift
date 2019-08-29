@@ -11,6 +11,7 @@ import Foundation
 import HealthKit
 import CoreMotion
 
+// TODO: App in the background
 
 class InterfaceController: WKInterfaceController {
     
@@ -39,9 +40,27 @@ class InterfaceController: WKInterfaceController {
             } else {
                 print("Authorization successfull")
                 self.startButton.setEnabled(true)
+                self.createWorkoutSession()
             }
         }
     }
+    
+    
+    func createWorkoutSession() {
+        let workoutConfiguration = HKWorkoutConfiguration()
+        workoutConfiguration.activityType = .other
+        workoutConfiguration.locationType = .unknown
+        
+        do {
+            workoutSession = try HKWorkoutSession(healthStore: healthDataManager.healthStore!, configuration: workoutConfiguration)
+            workoutSession?.delegate = self
+        } catch {
+            print(error)
+        }
+    }
+    
+    
+    
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
