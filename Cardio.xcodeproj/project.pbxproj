@@ -1,0 +1,634 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAC880E72317DF2800A4B9DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC880E62317DF2800A4B9DD /* AppDelegate.swift */; };
+		AAC880E92317DF2800A4B9DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC880E82317DF2800A4B9DD /* SceneDelegate.swift */; };
+		AAC880EB2317DF2800A4B9DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC880EA2317DF2800A4B9DD /* ViewController.swift */; };
+		AAC880EE2317DF2800A4B9DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC880EC2317DF2800A4B9DD /* Main.storyboard */; };
+		AAC880F02317DF2A00A4B9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC880EF2317DF2A00A4B9DD /* Assets.xcassets */; };
+		AAC880F32317DF2A00A4B9DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC880F12317DF2A00A4B9DD /* LaunchScreen.storyboard */; };
+		AAC880F82317DF2A00A4B9DD /* Cardio WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AAC880F72317DF2A00A4B9DD /* Cardio WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AAC880FE2317DF2A00A4B9DD /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC880FC2317DF2A00A4B9DD /* Interface.storyboard */; };
+		AAC881002317DF2B00A4B9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC880FF2317DF2B00A4B9DD /* Assets.xcassets */; };
+		AAC881072317DF2B00A4B9DD /* Cardio WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AAC881062317DF2B00A4B9DD /* Cardio WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AAC8810C2317DF2B00A4B9DD /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC8810B2317DF2B00A4B9DD /* InterfaceController.swift */; };
+		AAC8810E2317DF2B00A4B9DD /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC8810D2317DF2B00A4B9DD /* ExtensionDelegate.swift */; };
+		AAC881102317DF2B00A4B9DD /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC8810F2317DF2B00A4B9DD /* NotificationController.swift */; };
+		AAC881122317DF2B00A4B9DD /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC881112317DF2B00A4B9DD /* ComplicationController.swift */; };
+		AAC881142317DF2B00A4B9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC881132317DF2B00A4B9DD /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AAC880F92317DF2A00A4B9DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC880DB2317DF2800A4B9DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAC880F62317DF2A00A4B9DD;
+			remoteInfo = "Cardio WatchKit App";
+		};
+		AAC881082317DF2B00A4B9DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC880DB2317DF2800A4B9DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAC881052317DF2B00A4B9DD;
+			remoteInfo = "Cardio WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AAC8811C2317DF2B00A4B9DD /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AAC881072317DF2B00A4B9DD /* Cardio WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAC881202317DF2B00A4B9DD /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				AAC880F82317DF2A00A4B9DD /* Cardio WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AAC880E32317DF2800A4B9DD /* Cardio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAC880E62317DF2800A4B9DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AAC880E82317DF2800A4B9DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AAC880EA2317DF2800A4B9DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AAC880ED2317DF2800A4B9DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AAC880EF2317DF2A00A4B9DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAC880F22317DF2A00A4B9DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AAC880F42317DF2A00A4B9DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAC880F72317DF2A00A4B9DD /* Cardio WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cardio WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAC880FD2317DF2A00A4B9DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		AAC880FF2317DF2B00A4B9DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAC881012317DF2B00A4B9DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAC881062317DF2B00A4B9DD /* Cardio WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Cardio WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAC8810B2317DF2B00A4B9DD /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		AAC8810D2317DF2B00A4B9DD /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		AAC8810F2317DF2B00A4B9DD /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		AAC881112317DF2B00A4B9DD /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		AAC881132317DF2B00A4B9DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAC881152317DF2B00A4B9DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAC881162317DF2B00A4B9DD /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAC880E02317DF2800A4B9DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAC881032317DF2B00A4B9DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAC880DA2317DF2800A4B9DD = {
+			isa = PBXGroup;
+			children = (
+				AAC880E52317DF2800A4B9DD /* Cardio */,
+				AAC880FB2317DF2A00A4B9DD /* Cardio WatchKit App */,
+				AAC8810A2317DF2B00A4B9DD /* Cardio WatchKit Extension */,
+				AAC880E42317DF2800A4B9DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAC880E42317DF2800A4B9DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAC880E32317DF2800A4B9DD /* Cardio.app */,
+				AAC880F72317DF2A00A4B9DD /* Cardio WatchKit App.app */,
+				AAC881062317DF2B00A4B9DD /* Cardio WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAC880E52317DF2800A4B9DD /* Cardio */ = {
+			isa = PBXGroup;
+			children = (
+				AAC880E62317DF2800A4B9DD /* AppDelegate.swift */,
+				AAC880E82317DF2800A4B9DD /* SceneDelegate.swift */,
+				AAC880EA2317DF2800A4B9DD /* ViewController.swift */,
+				AAC880EC2317DF2800A4B9DD /* Main.storyboard */,
+				AAC880EF2317DF2A00A4B9DD /* Assets.xcassets */,
+				AAC880F12317DF2A00A4B9DD /* LaunchScreen.storyboard */,
+				AAC880F42317DF2A00A4B9DD /* Info.plist */,
+			);
+			path = Cardio;
+			sourceTree = "<group>";
+		};
+		AAC880FB2317DF2A00A4B9DD /* Cardio WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				AAC880FC2317DF2A00A4B9DD /* Interface.storyboard */,
+				AAC880FF2317DF2B00A4B9DD /* Assets.xcassets */,
+				AAC881012317DF2B00A4B9DD /* Info.plist */,
+			);
+			path = "Cardio WatchKit App";
+			sourceTree = "<group>";
+		};
+		AAC8810A2317DF2B00A4B9DD /* Cardio WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AAC8810B2317DF2B00A4B9DD /* InterfaceController.swift */,
+				AAC8810D2317DF2B00A4B9DD /* ExtensionDelegate.swift */,
+				AAC8810F2317DF2B00A4B9DD /* NotificationController.swift */,
+				AAC881112317DF2B00A4B9DD /* ComplicationController.swift */,
+				AAC881132317DF2B00A4B9DD /* Assets.xcassets */,
+				AAC881152317DF2B00A4B9DD /* Info.plist */,
+				AAC881162317DF2B00A4B9DD /* PushNotificationPayload.apns */,
+			);
+			path = "Cardio WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAC880E22317DF2800A4B9DD /* Cardio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAC881212317DF2B00A4B9DD /* Build configuration list for PBXNativeTarget "Cardio" */;
+			buildPhases = (
+				AAC880DF2317DF2800A4B9DD /* Sources */,
+				AAC880E02317DF2800A4B9DD /* Frameworks */,
+				AAC880E12317DF2800A4B9DD /* Resources */,
+				AAC881202317DF2B00A4B9DD /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAC880FA2317DF2A00A4B9DD /* PBXTargetDependency */,
+			);
+			name = Cardio;
+			productName = Cardio;
+			productReference = AAC880E32317DF2800A4B9DD /* Cardio.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AAC880F62317DF2A00A4B9DD /* Cardio WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAC8811D2317DF2B00A4B9DD /* Build configuration list for PBXNativeTarget "Cardio WatchKit App" */;
+			buildPhases = (
+				AAC880F52317DF2A00A4B9DD /* Resources */,
+				AAC8811C2317DF2B00A4B9DD /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAC881092317DF2B00A4B9DD /* PBXTargetDependency */,
+			);
+			name = "Cardio WatchKit App";
+			productName = "Cardio WatchKit App";
+			productReference = AAC880F72317DF2A00A4B9DD /* Cardio WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		AAC881052317DF2B00A4B9DD /* Cardio WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAC881192317DF2B00A4B9DD /* Build configuration list for PBXNativeTarget "Cardio WatchKit Extension" */;
+			buildPhases = (
+				AAC881022317DF2B00A4B9DD /* Sources */,
+				AAC881032317DF2B00A4B9DD /* Frameworks */,
+				AAC881042317DF2B00A4B9DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cardio WatchKit Extension";
+			productName = "Cardio WatchKit Extension";
+			productReference = AAC881062317DF2B00A4B9DD /* Cardio WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAC880DB2317DF2800A4B9DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = davidlaiymani;
+				TargetAttributes = {
+					AAC880E22317DF2800A4B9DD = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					AAC880F62317DF2A00A4B9DD = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					AAC881052317DF2B00A4B9DD = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = AAC880DE2317DF2800A4B9DD /* Build configuration list for PBXProject "Cardio" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAC880DA2317DF2800A4B9DD;
+			productRefGroup = AAC880E42317DF2800A4B9DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAC880E22317DF2800A4B9DD /* Cardio */,
+				AAC880F62317DF2A00A4B9DD /* Cardio WatchKit App */,
+				AAC881052317DF2B00A4B9DD /* Cardio WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAC880E12317DF2800A4B9DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC880F32317DF2A00A4B9DD /* LaunchScreen.storyboard in Resources */,
+				AAC880F02317DF2A00A4B9DD /* Assets.xcassets in Resources */,
+				AAC880EE2317DF2800A4B9DD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAC880F52317DF2A00A4B9DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC881002317DF2B00A4B9DD /* Assets.xcassets in Resources */,
+				AAC880FE2317DF2A00A4B9DD /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAC881042317DF2B00A4B9DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC881142317DF2B00A4B9DD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAC880DF2317DF2800A4B9DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC880EB2317DF2800A4B9DD /* ViewController.swift in Sources */,
+				AAC880E72317DF2800A4B9DD /* AppDelegate.swift in Sources */,
+				AAC880E92317DF2800A4B9DD /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAC881022317DF2B00A4B9DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC881102317DF2B00A4B9DD /* NotificationController.swift in Sources */,
+				AAC881122317DF2B00A4B9DD /* ComplicationController.swift in Sources */,
+				AAC8810E2317DF2B00A4B9DD /* ExtensionDelegate.swift in Sources */,
+				AAC8810C2317DF2B00A4B9DD /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AAC880FA2317DF2A00A4B9DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAC880F62317DF2A00A4B9DD /* Cardio WatchKit App */;
+			targetProxy = AAC880F92317DF2A00A4B9DD /* PBXContainerItemProxy */;
+		};
+		AAC881092317DF2B00A4B9DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAC881052317DF2B00A4B9DD /* Cardio WatchKit Extension */;
+			targetProxy = AAC881082317DF2B00A4B9DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AAC880EC2317DF2800A4B9DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAC880ED2317DF2800A4B9DD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AAC880F12317DF2A00A4B9DD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAC880F22317DF2A00A4B9DD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AAC880FC2317DF2A00A4B9DD /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAC880FD2317DF2A00A4B9DD /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AAC881172317DF2B00A4B9DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AAC881182317DF2B00A4B9DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAC8811A2317DF2B00A4B9DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BCB2U5N8E6;
+				INFOPLIST_FILE = "Cardio WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.univ-fcomte.courspart.Cardio.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		AAC8811B2317DF2B00A4B9DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BCB2U5N8E6;
+				INFOPLIST_FILE = "Cardio WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.univ-fcomte.courspart.Cardio.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		AAC8811E2317DF2B00A4B9DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BCB2U5N8E6;
+				IBSC_MODULE = Cardio_WatchKit_Extension;
+				INFOPLIST_FILE = "Cardio WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.univ-fcomte.courspart.Cardio.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		AAC8811F2317DF2B00A4B9DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BCB2U5N8E6;
+				IBSC_MODULE = Cardio_WatchKit_Extension;
+				INFOPLIST_FILE = "Cardio WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.univ-fcomte.courspart.Cardio.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		AAC881222317DF2B00A4B9DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BCB2U5N8E6;
+				INFOPLIST_FILE = Cardio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.univ-fcomte.courspart.Cardio";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AAC881232317DF2B00A4B9DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BCB2U5N8E6;
+				INFOPLIST_FILE = Cardio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.univ-fcomte.courspart.Cardio";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAC880DE2317DF2800A4B9DD /* Build configuration list for PBXProject "Cardio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAC881172317DF2B00A4B9DD /* Debug */,
+				AAC881182317DF2B00A4B9DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAC881192317DF2B00A4B9DD /* Build configuration list for PBXNativeTarget "Cardio WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAC8811A2317DF2B00A4B9DD /* Debug */,
+				AAC8811B2317DF2B00A4B9DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAC8811D2317DF2B00A4B9DD /* Build configuration list for PBXNativeTarget "Cardio WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAC8811E2317DF2B00A4B9DD /* Debug */,
+				AAC8811F2317DF2B00A4B9DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAC881212317DF2B00A4B9DD /* Build configuration list for PBXNativeTarget "Cardio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAC881222317DF2B00A4B9DD /* Debug */,
+				AAC881232317DF2B00A4B9DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAC880DB2317DF2800A4B9DD /* Project object */;
+}
