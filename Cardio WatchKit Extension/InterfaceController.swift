@@ -8,10 +8,27 @@
 
 import WatchKit
 import Foundation
+import HealthKit
+import CoreMotion
 
 
 class InterfaceController: WKInterfaceController {
-
+    
+    @IBOutlet weak var stepsLabel: WKInterfaceLabel!
+    @IBOutlet weak var bpmLabel: WKInterfaceLabel!
+    @IBOutlet weak var startButton: WKInterfaceButton!
+    
+    let healthKitManager = 
+    var isWorkoutInProgress = false
+    
+    var workoutSession: HKWorkoutSession?
+    var workoutStartDate: Date?
+    var heartRateQuery: HKQuery?
+    var heartRateSamples = [HKQuantitySample]()
+    
+    let pedometer = CMPedometer()
+    var totalSteps = 0
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         

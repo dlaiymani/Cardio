@@ -22,6 +22,7 @@
 		AAC881102317DF2B00A4B9DD /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC8810F2317DF2B00A4B9DD /* NotificationController.swift */; };
 		AAC881122317DF2B00A4B9DD /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC881112317DF2B00A4B9DD /* ComplicationController.swift */; };
 		AAC881142317DF2B00A4B9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC881132317DF2B00A4B9DD /* Assets.xcassets */; };
+		AAC881272318044D00A4B9DD /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC881262318044D00A4B9DD /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		AAC881132317DF2B00A4B9DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAC881152317DF2B00A4B9DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAC881162317DF2B00A4B9DD /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		AAC881242318044D00A4B9DD /* Cardio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cardio.entitlements; sourceTree = "<group>"; };
+		AAC881262318044D00A4B9DD /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC881272318044D00A4B9DD /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +117,9 @@
 				AAC880E52317DF2800A4B9DD /* Cardio */,
 				AAC880FB2317DF2A00A4B9DD /* Cardio WatchKit App */,
 				AAC8810A2317DF2B00A4B9DD /* Cardio WatchKit Extension */,
+				AAC881282318054500A4B9DD /* Shared */,
 				AAC880E42317DF2800A4B9DD /* Products */,
+				AAC881252318044D00A4B9DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +136,7 @@
 		AAC880E52317DF2800A4B9DD /* Cardio */ = {
 			isa = PBXGroup;
 			children = (
+				AAC881242318044D00A4B9DD /* Cardio.entitlements */,
 				AAC880E62317DF2800A4B9DD /* AppDelegate.swift */,
 				AAC880E82317DF2800A4B9DD /* SceneDelegate.swift */,
 				AAC880EA2317DF2800A4B9DD /* ViewController.swift */,
@@ -163,6 +170,21 @@
 				AAC881162317DF2B00A4B9DD /* PushNotificationPayload.apns */,
 			);
 			path = "Cardio WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		AAC881252318044D00A4B9DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAC881262318044D00A4B9DD /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AAC881282318054500A4B9DD /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -557,6 +579,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Cardio/Cardio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BCB2U5N8E6;
 				INFOPLIST_FILE = Cardio/Info.plist;
@@ -575,6 +598,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Cardio/Cardio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BCB2U5N8E6;
 				INFOPLIST_FILE = Cardio/Info.plist;

@@ -15,7 +15,7 @@
                             <items>
                                 <group width="1" alignment="left" spacing="10" id="t6i-eu-C8l">
                                     <items>
-                                        <imageView width="0.20000000000000001" height="1" alignment="left" image="location.circle" catalog="system" id="Ig0-uO-cCR"/>
+                                        <imageView width="0.20000000000000001" widthAdjustment="-1" height="1" alignment="left" image="location.circle" catalog="system" id="Ig0-uO-cCR"/>
                                         <label alignment="left" text="Steps" id="jsG-mM-5mC"/>
                                     </items>
                                 </group>
@@ -31,6 +31,11 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="bpmLabel" destination="QHx-gR-aIm" id="51A-Zx-rfi"/>
+                        <outlet property="startButton" destination="UPq-Bc-V5F" id="UHg-pk-ZZQ"/>
+                        <outlet property="stepsLabel" destination="jsG-mM-5mC" id="k2f-aE-xi5"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
