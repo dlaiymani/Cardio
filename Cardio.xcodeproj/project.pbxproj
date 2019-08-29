@@ -24,6 +24,7 @@
 		AAC881142317DF2B00A4B9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC881132317DF2B00A4B9DD /* Assets.xcassets */; };
 		AAC881272318044D00A4B9DD /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC881262318044D00A4B9DD /* HealthKit.framework */; };
 		AAC8812B23180A0800A4B9DD /* HealthDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC881292318059500A4B9DD /* HealthDataManager.swift */; };
+		AAC8812F231811E500A4B9DD /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC8812E231811E500A4B9DD /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		AAC881242318044D00A4B9DD /* Cardio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cardio.entitlements; sourceTree = "<group>"; };
 		AAC881262318044D00A4B9DD /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		AAC881292318059500A4B9DD /* HealthDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataManager.swift; sourceTree = "<group>"; };
+		AAC8812D231811E500A4B9DD /* Cardio WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Cardio WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		AAC8812E231811E500A4B9DD /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC8812F231811E500A4B9DD /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +167,7 @@
 		AAC8810A2317DF2B00A4B9DD /* Cardio WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				AAC8812D231811E500A4B9DD /* Cardio WatchKit Extension.entitlements */,
 				AAC8810B2317DF2B00A4B9DD /* InterfaceController.swift */,
 				AAC8810D2317DF2B00A4B9DD /* ExtensionDelegate.swift */,
 				AAC8810F2317DF2B00A4B9DD /* NotificationController.swift */,
@@ -177,6 +182,7 @@
 		AAC881252318044D00A4B9DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AAC8812E231811E500A4B9DD /* HealthKit.framework */,
 				AAC881262318044D00A4B9DD /* HealthKit.framework */,
 			);
 			name = Frameworks;
@@ -493,6 +499,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Cardio WatchKit Extension/Cardio WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BCB2U5N8E6;
 				INFOPLIST_FILE = "Cardio WatchKit Extension/Info.plist";
@@ -515,6 +522,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Cardio WatchKit Extension/Cardio WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BCB2U5N8E6;
 				INFOPLIST_FILE = "Cardio WatchKit Extension/Info.plist";
