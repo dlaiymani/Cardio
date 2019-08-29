@@ -15,7 +15,7 @@ class HealthDataManager: NSObject {
     
     private var healthStore: HKHealthStore?
     
-    private init() {
+    private override init() {
         if HKHealthStore.isHealthDataAvailable() {
             healthStore = HKHealthStore.init()
         }
