@@ -18,7 +18,7 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var bpmLabel: WKInterfaceLabel!
     @IBOutlet weak var startButton: WKInterfaceButton!
     
-    let healthKitManager = 
+    let healthDataManager = HealthDataManager.sharedManager
     var isWorkoutInProgress = false
     
     var workoutSession: HKWorkoutSession?
@@ -32,7 +32,15 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        startButton.setEnabled(false)
+        healthDataManager.authorizeHealthKit { (success, error) in
+            if let error = error {
+                print("Authorization failed with error \(error.localizedDescription)")
+            } else {
+                print("Authorization successfull")
+                self.startButton.setEnabled(true)
+            }
+        }
     }
     
     override func willActivate() {

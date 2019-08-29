@@ -20,4 +20,22 @@ class HealthDataManager: NSObject {
             healthStore = HKHealthStore.init()
         }
     }
+    
+    func authorizeHealthKit(_ completion: @escaping ((_ success: Bool, _ error: Error?) -> Void)) {
+    
+        guard let heartRateType = HKQuantityType.quantityType(forIdentifier: .heartRate) else { return }
+        guard let stepCountType = HKQuantityType.quantityType(forIdentifier: .stepCount) else {
+            return }
+        
+        let typesToShare = Set([HKObjectType.workoutType(), heartRateType, stepCountType])
+        let typesToRead = Set([HKObjectType.workoutType(), heartRateType, stepCountType])
+        
+        healthStore?.requestAuthorization(toShare: typesToShare, read: typesToRead) { (success, error) in
+            if success {
+                completion(success, nil)
+            } else {
+                completion(false, error)
+            }
+        }
+    }
 }

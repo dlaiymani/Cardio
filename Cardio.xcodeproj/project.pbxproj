@@ -23,6 +23,7 @@
 		AAC881122317DF2B00A4B9DD /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC881112317DF2B00A4B9DD /* ComplicationController.swift */; };
 		AAC881142317DF2B00A4B9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC881132317DF2B00A4B9DD /* Assets.xcassets */; };
 		AAC881272318044D00A4B9DD /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC881262318044D00A4B9DD /* HealthKit.framework */; };
+		AAC8812B23180A0800A4B9DD /* HealthDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC881292318059500A4B9DD /* HealthDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		AAC881162317DF2B00A4B9DD /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		AAC881242318044D00A4B9DD /* Cardio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cardio.entitlements; sourceTree = "<group>"; };
 		AAC881262318044D00A4B9DD /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		AAC881292318059500A4B9DD /* HealthDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +119,7 @@
 				AAC880E52317DF2800A4B9DD /* Cardio */,
 				AAC880FB2317DF2A00A4B9DD /* Cardio WatchKit App */,
 				AAC8810A2317DF2B00A4B9DD /* Cardio WatchKit Extension */,
-				AAC881282318054500A4B9DD /* Shared */,
+				AAC881292318059500A4B9DD /* HealthDataManager.swift */,
 				AAC880E42317DF2800A4B9DD /* Products */,
 				AAC881252318044D00A4B9DD /* Frameworks */,
 			);
@@ -178,13 +180,6 @@
 				AAC881262318044D00A4B9DD /* HealthKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AAC881282318054500A4B9DD /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +326,7 @@
 			files = (
 				AAC881102317DF2B00A4B9DD /* NotificationController.swift in Sources */,
 				AAC881122317DF2B00A4B9DD /* ComplicationController.swift in Sources */,
+				AAC8812B23180A0800A4B9DD /* HealthDataManager.swift in Sources */,
 				AAC8810E2317DF2B00A4B9DD /* ExtensionDelegate.swift in Sources */,
 				AAC8810C2317DF2B00A4B9DD /* InterfaceController.swift in Sources */,
 			);
