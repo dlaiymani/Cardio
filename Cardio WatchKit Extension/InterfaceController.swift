@@ -12,6 +12,7 @@ import HealthKit
 import CoreMotion
 
 // TODO: App in the background
+// TODO: test different activity for the workout session (walking)
 
 class InterfaceController: WKInterfaceController {
     
@@ -60,7 +61,44 @@ class InterfaceController: WKInterfaceController {
     }
     
     
+    @IBAction func startOrStopWorkout() {
+        
+        if isWorkoutInProgress {
+            endWorkoutSession()
+        } else {
+            startWorkoutSession()
+        }
+        isWorkoutInProgress = !isWorkoutInProgress
+        startButton.setTitle(isWorkoutInProgress ? "Stop" : "Start")
+    }
     
+    
+    func startWorkoutSession() {
+        if self.workoutSession == nil {
+            createWorkoutSession()
+        }
+        
+        guard let session = workoutSession else {
+            print("Cannot start a workout without a workout session")
+            return
+        }
+        healthDataManager.healthStore!.start(session)
+        self.workoutStartDate = Date()
+    }
+    
+    func endWorkoutSession() {
+        guard let session = workoutSession else {
+            print("Cannot start a workout without a workout session")
+            return
+        }
+        healthDataManager.healthStore!.end(session)
+        saveWorkout()
+    }
+    
+    
+    func saveWorkout() {
+        
+    }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
@@ -72,4 +110,39 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+}
+
+
+extension InterfaceController: HKWorkoutSessionDelegate {
+    func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState, from fromState: HKWorkoutSessionState, date: Date) {
+        switch toState {
+        case .running:
+            guard let workoutStartDate = workoutStartDate else { return }
+            if let query = healthDataManager.createHeartRateStreamingQuery(workoutStartDate) {
+                heartRateQuery = query
+                healthDataManager.heartRateDelegate = self
+                healthDataManager.healthStore!.execute(query)
+            }
+        case .ended:
+            if let query = heartRateQuery {
+                healthDataManager.healthStore!.stop(query)
+            }
+        default:
+            print("Other workout state")
+        }
+    }
+    
+    func workoutSession(_ workoutSession: HKWorkoutSession, didFailWithError error: Error) {
+                print("Workout failed with error \(error)")
+    }
+}
+
+
+extension InterfaceController: HeartRateDelegate {
+    func heartRateUpdated(heartRateSamples: [HKSample]) {
+        
+        
+    }
+    
+    
 }

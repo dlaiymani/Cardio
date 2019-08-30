@@ -27,7 +27,11 @@
                                         </label>
                                     </items>
                                 </group>
-                                <button width="1" alignment="left" verticalAlignment="bottom" title="Start" id="UPq-Bc-V5F"/>
+                                <button width="1" alignment="left" verticalAlignment="bottom" title="Start" id="UPq-Bc-V5F">
+                                    <connections>
+                                        <action selector="startOrStopWorkout" destination="AgC-eL-Hgc" id="QGB-0Q-wrU"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
