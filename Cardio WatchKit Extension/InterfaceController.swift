@@ -69,11 +69,15 @@ class InterfaceController: WKInterfaceController {
             startWorkoutSession()
         }
         isWorkoutInProgress = !isWorkoutInProgress
+        print("yo")
+
         startButton.setTitle(isWorkoutInProgress ? "Stop" : "Start")
     }
     
     
     func startWorkoutSession() {
+        print("yo")
+
         if self.workoutSession == nil {
             createWorkoutSession()
         }
@@ -109,7 +113,7 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+ 
 }
 
 
@@ -122,6 +126,8 @@ extension InterfaceController: HKWorkoutSessionDelegate {
                 heartRateQuery = query
                 healthDataManager.heartRateDelegate = self
                 healthDataManager.healthStore!.execute(query)
+                print("Running...")
+
             }
         case .ended:
             if let query = heartRateQuery {
@@ -140,9 +146,16 @@ extension InterfaceController: HKWorkoutSessionDelegate {
 
 extension InterfaceController: HeartRateDelegate {
     func heartRateUpdated(heartRateSamples: [HKSample]) {
+        guard let heartRateSamples = heartRateSamples as? [HKQuantitySample] else {
+            return
+        }
         
+        DispatchQueue.main.async {
+            guard let sample = heartRateSamples.first else { return }
         
+            let value = sample.quantity.doubleValue(for: HKUnit(from: "count/min"))
+            let heartRateString = String(format: "%.00F", value)
+            self.bpmLabel.setText(heartRateString)
+        }
     }
-    
-    
 }
